@@ -1,0 +1,157 @@
+eth.getBlock(0)
+eth.accounts
+miner.start()
+eth.blockNumber
+eth.mining
+eth.hashrate
+miner.stop()
+eth.mining
+eth.hashrate
+miner.start()
+eth.hashrate
+eth.getBlock(1)
+eth.getBlock(2)
+eth.getBlock(3)
+eth.blockNumber
+miner.start()
+eth.blockNumber
+eth.hashrate
+eth.coinbase
+miner.setEtherbase(eth.accounts[0])
+eth.coinbase
+eth.hashrate
+eth.blockNumber
+eth.getBlock(1)
+eth.getBlock(2)
+eth.coinbase == eth.accounts[0]
+eth.getBalance(eth.accounts[0])
+eth.getBalance(eth.accounts[1])
+web3.fromWei(eth.getBalance(eth.accounts[0]),"ether")
+eth.mining
+miner.stop()
+eth.mining
+eth.hashrate
+eth.getBalance(eth.accounts[1])
+eth.getBalance(eth.accounts[0])
+hogehoge01
+eth.getBalance(eth.accounts[0])
+eth.sendTransaction({from: eth.accounts[0], to: eth.accounts[1], value: web3.toWei(5, "ether")})
+eth.sendTransaction({from: eth.accounts[0], to: eth.accounts[1], value: web3.toWei(15, "ether")})
+eth.getBalance(eth.accounts[1])
+eth.getBalance(eth.accounts[0])
+miner.start()
+eth.getBalance(eth.accounts[1])
+miner.end()
+miner.stop()
+eth.blockNumber
+eth.getBlock(108)
+eth.getBlock(109)
+eth.getBlock(107)
+eth.getBlock(108)
+eth.getBlock(105)
+eth.getBlock(106)
+eth.getBlock(107)
+eth.getBlock(108)
+eth.getBlock(109)
+eth.blockNumber
+eth.getTransaction('0xe8ec893b40e2517cf56771c4d3f2497d8bff7de6e2e0b203f95aa6e09cae93c0')
+eth.accounts
+eth.getBlock(95)
+net.peerCount
+solc --version
+var bin = "0x6060604052341561000f57600080fd5b60d38061001d6000396000f3006060604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806360fe47b114604e5780636d4ce63c14606e575b600080fd5b3415605857600080fd5b606c60048080359060200190919050506094565b005b3415607857600080fd5b607e609e565b6040518082815260200191505060405180910390f35b8060008190555050565b600080549050905600a165627a7a72305820bdd0549ef41e9c70cc944a6c19e54da47ecda63a1c5edfc7024125b5c49b4acb0029"
+console.log(bin);
+var abi = [{"constant":false,"inputs":[{"name":"x","type":"uint256"}],"name":"set","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"get","outputs":[{"name":"retVal","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"}]
+var bin = "608060405234801561001057600080fd5b5060bd8061001f6000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c806360fe47b11460375780636d4ce63c146062575b600080fd5b606060048036036020811015604b57600080fd5b8101908080359060200190929190505050607e565b005b60686088565b6040518082815260200191505060405180910390f35b8060008190555050565b6000805490509056fea165627a7a72305820b30beb51e1ee6b90ad638c1647bccedda3858976d80cbf3001c32b2848f38bd00029"
+var abi = [{"constant":false,"inputs":[{"name":"x","type":"uint256"}],"name":"set","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"get","outputs":[{"name":"retVal","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"}]
+var contract = eth.contract(abi)
+console.log(contract);
+var myContract = contract.new({ from: eth.accounts[0], data: bin})
+eth.accounts[0]
+bin
+var myContract = contract.new({ from: eth.accounts[0], data: bin })
+var myContract = contract.new({from:eth.accounts[0],data:bin})
+{from:eth.accounts[0],data:bin}
+"{from:eth.accounts[0],data:bin}"
+{from:eth.accounts[0],data:bin}
+{ from: eth.accounts[0], data: bin }
+{ from: eth.accounts[0] }
+{ from: eth.accounts[0], data: "ko" }
+{ "from": eth.accounts[0], "data": bin }
+{ "from": eth.accounts[0], "data": "bin" }
+[{"constant":false,"inputs":[{"name":"x","type":"uint256"}],"name":"set","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"get","outputs":[{"name":"retVal","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"}]
+{"constant":false,"inputs":[{"name":"x","type":"uint256"}],"name":"set","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"get","outputs":[{"name":"retVal","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"}
+{"constant":false,"inputs":[{"name":"x","type":"uint256"}],"name":"set","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"}
+[{"constant":false,"inputs":[{"name":"x","type":"uint256"}],"name":"set","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"}]
+{"constant":false,"inputs":[{"name":"x","type":"uint256"}],"name":"set","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"}
+myContract
+var abi = [{"constant":false,"inputs":[{"name":"x","type":"uint256"}],"name":"set","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"get","outputs":[{"name":"retVal","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"}]
+var myContract = contract.new({ from: eth.accounts[0], data: bin })
+var myContract = contract.new({ from: eth.accounts[0], data: bin})
+var myContract = contract.new({ from: eth.accounts[0], data: bin}.toString('hex'))
+var myContract = contract.new("0x" + { from: eth.accounts[0], data: bin}.toString('hex'))
+var myContract = contract.new({ from: eth.accounts[0], data: bin}.asciiToHex)
+var myContract = contract.new({ from: eth.accounts[0], data: bin})
+eth.accounts[0]
+bin
+var myContract = contract.new({ from: eth.accounts[0]})
+{ from: eth.accounts[0]}
+{ ok: "Ok", from: eth.accounts[0]}
+myContract.abi
+myContract
+eth.accounts
+miner.start()
+eth.mining
+eth.blockNumber
+eth.hashrate
+eth.blockNumber
+eth.hashrate
+eth.coinbase
+eth.hashrate
+eth.coinbase
+eth.blockNumber
+eth.hashrate
+miner.start()
+eth.hashrate
+miner.finish()
+miner.finish
+miner.start()
+miner.start
+miner.start()
+eth.hashrate
+eth.blockNumber
+eth.hashrate
+eth.blockNumber
+eth.mining
+eth.hashrate
+eth.blockNumber
+miner.start()
+eth.hashrate
+miner.start()
+eth.hashrate
+eth.blockNumber
+net.peerCount
+admin.peers
+admin.nodeInfo.enode
+eth.accounts;
+eth.mining
+miner.finish()
+miner.stop()
+miner.start()
+eth.accounts
+eth.hashrate
+miner.start()
+eth.hashrate
+miner.start()
+eth.hashrate
+miner.stop()
+miner.start()
+eth.hashrate
+miner.start()
+eth.hashrate
+currentProvider.host
+currentProvider
+eth.hashrate
+eth.blockNumber
+eth.hashrate
+eth.blockNumber
